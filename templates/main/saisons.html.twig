@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block title %}{{ parent()  }}| {{saison}}{% endblock %}
+
+{% block body %}
+
+
+
+{% if saison == 'hiver' %}
+<div class="text-center hiver">
+    <h2 class="text-center">{{saison|capitalize}}</h2>
+    <img src="{{ asset('images/hiver.jpg') }}" alt="" width="300" height="200">
+</div>    
+
+{% elseif saison == 'ete' %}
+<div class="text-center ete">
+    <h2 class="text-center">{{saison|capitalize}}</h2>
+    <img src="{{ asset('images/ete.jpg') }}" alt="" width="300" height="200">
+</div>
+
+{% elseif saison == 'printemps' %}
+<div class="text-center printemps">
+    <h2 class="text-center">{{saison|capitalize}}</h2>
+    <img src="{{ asset('images/printemps.jpg') }}" alt="" width="300" height="200">
+</div>    
+
+{% elseif saison == 'automne' %}
+<div class="text-center automne">
+    <h2 class="text-center">{{saison|capitalize}}</h2>
+    <img src="{{ asset('images/automne.jpg') }}" alt="" width="300" height="200">
+</div>    
+{% endif %}
+
+{% endblock %}
